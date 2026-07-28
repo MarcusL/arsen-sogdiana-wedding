@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
+/* ----------------------------- */
+/* Базовые настройки */
+/* ----------------------------- */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf9f7;
+  --text: #5f554b;
+
+  --gold: #b89664;
+
+  --ivory: #f8f5ef;
+
+  --champagne: #efe6da;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+
+  font-family: var(--font-body);
+
+  overflow-x: hidden;
+}
+
+/* Заголовки */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+/* Кнопки */
+
+button {
+  cursor: pointer;
+}
+
+/* Выделение текста */
+
+::selection {
+  background: #b89664;
+  color: white;
+}
+/* Каллиграфия для имен */
+
+.script {
+  font-family: var(--font-script);
+}
+
+
+/* Элегантные заголовки */
+
+.heading {
+  font-family: var(--font-heading);
 }
