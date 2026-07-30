@@ -65,7 +65,7 @@ font-normal
 
 >
 
-Arsen & Assel
+Arsen & Sogdiana
 
 </motion.h1>
 
