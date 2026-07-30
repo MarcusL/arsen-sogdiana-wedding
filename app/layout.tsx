@@ -26,7 +26,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Арсен & Асель",
+  title: "Арсен & Согдиана",
   description: "Свадебное приглашение",
 };
 

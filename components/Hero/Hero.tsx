@@ -70,7 +70,7 @@ md:text-9xl
 text-[#5F554B]
 "
 >
-Асель
+Согдиана
 </h2>
 
           <div className="w-24 h-px bg-[#B89664] mx-auto my-10"></div>
