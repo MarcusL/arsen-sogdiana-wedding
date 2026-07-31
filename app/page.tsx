@@ -1,30 +1,18 @@
 import Loader from "../components/Loader/Loader";
 import Petals from "../components/Petals/Petals";
-import SmoothScroll from "../components/SmoothScroll/SmoothScroll";
 import Welcome from "../components/Welcome/Welcome";
 import Countdown from "../components/Countdown/Countdown";
 
-
 export default function Home() {
-
   return (
+    <main>
+      <Loader />
 
-    <SmoothScroll>
+      <Petals />
 
-      <main>
+      <Welcome />
 
-        <Loader />
-
-        <Petals />
-
-        <Welcome />
-
-        <Countdown />
-
-      </main>
-
-    </SmoothScroll>
-
+      <Countdown />
+    </main>
   );
-
 }
