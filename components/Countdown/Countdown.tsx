@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 
 
 const weddingDate = new Date(
-  "2027-07-12T17:00:00"
+  2027,
+  6,
+  12,
+  17,
+  0,
+  0
 );
 
 
