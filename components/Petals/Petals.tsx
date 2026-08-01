@@ -1,194 +1,194 @@
-"use client";
+// "use client";
 
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+// import { motion } from "framer-motion";
+// import { useEffect, useState } from "react";
 
 
-type Petal = {
-    id: number;
-    left: number;
-    duration: number;
-    delay: number;
-    size: number;
-    rotate: number;
-};
+// type Petal = {
+//     id: number;
+//     left: number;
+//     duration: number;
+//     delay: number;
+//     size: number;
+//     rotate: number;
+// };
 
 
-export default function Petals() {
+// export default function Petals() {
 
 
-    const [petals, setPetals] = useState<Petal[]>([]);
+//     const [petals, setPetals] = useState<Petal[]>([]);
 
 
 
-    useEffect(() => {
+//     useEffect(() => {
 
 
-        const generatedPetals = Array.from(
-            { length: 20 },
-            (_, index) => ({
+//         const generatedPetals = Array.from(
+//             { length: 20 },
+//             (_, index) => ({
 
-                id: index,
+//                 id: index,
 
-                left: Math.random() * 100,
+//                 left: Math.random() * 100,
 
-                duration:
-                    8 + Math.random() * 10,
+//                 duration:
+//                     8 + Math.random() * 10,
 
-                delay:
-                    Math.random() * 10,
+//                 delay:
+//                     Math.random() * 10,
 
-                size:
-                    12 + Math.random() * 15,
+//                 size:
+//                     12 + Math.random() * 15,
 
-                rotate:
-                    Math.random() * 360,
+//                 rotate:
+//                     Math.random() * 360,
 
-            })
-        );
+//             })
+//         );
 
 
-        setPetals(generatedPetals);
+//         setPetals(generatedPetals);
 
 
-    }, []);
+//     }, []);
 
 
 
-    return (
+//     return (
 
-        <div
-            className="
-            fixed
-            inset-0
-            pointer-events-none
-            overflow-hidden
-            z-[50]
-            "
-        >
+//         <div
+//             className="
+//             fixed
+//             inset-0
+//             pointer-events-none
+//             overflow-hidden
+//             z-[50]
+//             "
+//         >
 
 
-            {
-                petals.map((petal)=>(
+//             {
+//                 petals.map((petal)=>(
 
 
-                    <motion.div
+//                     <motion.div
 
 
-                        key={petal.id}
+//                         key={petal.id}
 
 
-                        initial={{
+//                         initial={{
 
-                            y:-100,
+//                             y:-100,
 
-                            rotate:petal.rotate,
+//                             rotate:petal.rotate,
 
-                            opacity:0,
+//                             opacity:0,
 
-                        }}
+//                         }}
 
 
-                        animate={{
+//                         animate={{
 
 
-                            y:"110vh",
+//                             y:"110vh",
 
 
-                            rotate:
-                                petal.rotate + 360,
+//                             rotate:
+//                                 petal.rotate + 360,
 
 
-                            opacity:[
+//                             opacity:[
 
-                                0,
+//                                 0,
 
-                                1,
+//                                 1,
 
-                                1,
+//                                 1,
 
-                                0
+//                                 0
 
-                            ]
+//                             ]
 
-                        }}
+//                         }}
 
 
 
-                        transition={{
+//                         transition={{
 
 
-                            duration:
-                                petal.duration,
+//                             duration:
+//                                 petal.duration,
 
 
-                            delay:
-                                petal.delay,
+//                             delay:
+//                                 petal.delay,
 
 
-                            repeat:Infinity,
+//                             repeat:Infinity,
 
 
-                            ease:"linear"
+//                             ease:"linear"
 
 
-                        }}
+//                         }}
 
 
 
-                        style={{
+//                         style={{
 
-                            left:
-                            `${petal.left}%`,
+//                             left:
+//                             `${petal.left}%`,
 
-                        }}
+//                         }}
 
 
-                        className="
-                        absolute
-                        top-0
-                        "
+//                         className="
+//                         absolute
+//                         top-0
+//                         "
 
 
-                    >
+//                     >
 
 
-                        <svg
+//                         <svg
 
-                            width={petal.size}
+//                             width={petal.size}
 
-                            height={petal.size * 1.5}
+//                             height={petal.size * 1.5}
 
-                            viewBox="0 0 30 45"
+//                             viewBox="0 0 30 45"
 
-                        >
+//                         >
 
 
-                            <path
+//                             <path
 
-                                d="
-                                M15 1
-                                C5 10 2 20 15 44
-                                C28 20 25 10 15 1
-                                "
+//                                 d="
+//                                 M15 1
+//                                 C5 10 2 20 15 44
+//                                 C28 20 25 10 15 1
+//                                 "
 
-                                fill="#EFE6DA"
+//                                 fill="#EFE6DA"
 
-                            />
+//                             />
 
 
-                        </svg>
+//                         </svg>
 
 
-                    </motion.div>
+//                     </motion.div>
 
 
-                ))
-            }
+//                 ))
+//             }
 
 
-        </div>
+//         </div>
 
-    );
+//     );
 
-}
+// }
