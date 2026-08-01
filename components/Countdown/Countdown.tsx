@@ -82,23 +82,28 @@ export default function Countdown() {
 
 
 
-  useEffect(() => {
+useEffect(() => {
 
+  const update = () => {
     setTime(calculateTime());
+  };
 
 
-    const timer = setInterval(() => {
-
-      setTime(calculateTime());
-
-    }, 1000);
+  update();
 
 
+  const timer = window.setInterval(
+    update,
+    1000
+  );
 
-    return () => clearInterval(timer);
+
+  return () => {
+    window.clearInterval(timer);
+  };
 
 
-  }, []);
+}, []);
 
 
 
