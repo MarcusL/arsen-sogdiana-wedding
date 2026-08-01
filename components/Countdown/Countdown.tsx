@@ -3,10 +3,20 @@
 import { useEffect, useState } from "react";
 
 export default function Countdown() {
-  const [status, setStatus] = useState("JavaScript ещё не запустился");
+  const [status, setStatus] = useState(
+    "JavaScript ещё не запустился"
+  );
 
   useEffect(() => {
-    setStatus("JavaScript работает на этом телефоне");
+    const timer = window.setTimeout(() => {
+      setStatus(
+        "JavaScript работает на этом телефоне"
+      );
+    }, 100);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
   }, []);
 
   return (
